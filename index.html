@@ -1,409 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zekiel's Site</title>
 
-    <meta name="description" content="What are you looking for?" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zekiel's Site</title>
 
-    <!-- begin og: -->
-    <meta property="og:title" content="Hey! I'm Zekiel / Maxine" />
-    <meta property="og:type" content="website" />
-    <!-- end og: -->
+  <meta name="description" content="What are you looking for?" />
 
-    <!-- begin style -->
-    <style>
-      * {
-        animation: fadein 2s;
-      }
+  <!-- begin og: -->
+  <meta property="og:title" content="Hey! I'm Zekiel / Maxine" />
+  <meta property="og:type" content="website" />
+  <!-- end og: -->
 
-      html,
-      body {
-        background: #111;
-        color: #fff;
-        font-family: monospace;
-        height: 100%;
-        margin: 0;
-      }
+  <!-- begin style -->
+  <style>
+    * {
+      animation: fadein 2s;
+    }
 
-      /* General Typography */
-      a {
-        text-decoration: none;
-        color: #d3d3d3;
-        font-size: 0.9em;
-      }
+    html,
+    body {
+      background: #111;
+      color: #fff;
+      font-family: monospace;
+      height: 100%;
+      margin: 0;
+    }
 
-      a:hover {
-        text-decoration: underline;
-      }
+    /* General Typography */
+    a {
+      text-decoration: none;
+      color: #d3d3d3;
+      font-size: 0.9em;
+    }
 
-      h2 {
-        font-size: 1.6em;
-        margin-bottom: 0.7em;
-      }
+    a:hover {
+      text-decoration: underline;
+    }
 
-      h2.has-badge {
-        display: inline-block;
-      }
+    h2 {
+      font-size: 1.6em;
+      margin-bottom: 0.7em;
+    }
 
-      .green {
-        color: #39ff14;
-      }
+    h2.has-badge {
+      display: inline-block;
+    }
 
-      .red {
-        color: #ee4b2b;
-      }
+    .green {
+      color: #39ff14;
+    }
 
-      .yellow {
-        color: #cccc33;
-      }
+    .red {
+      color: #ee4b2b;
+    }
 
-      .tor-badge {
-        padding: 2px;
-        display: inline-block;
-        background-color: #850101;
-      }
+    .yellow {
+      color: #cccc33;
+    }
 
+    .tor-badge {
+      padding: 2px;
+      display: inline-block;
+      background-color: #850101;
+    }
+
+    div.close {
+      line-height: 120%;
+      overflow-wrap: anywhere;
+    }
+
+    @media (min-width: 768px) {
       div.close {
-        line-height: 120%;
-        overflow-wrap: anywhere;
+        line-height: 60%;
+        overflow-wrap: normal;
       }
+    }
 
-      @media (min-width: 768px) {
-        div.close {
-          line-height: 60%;
-          overflow-wrap: normal;
-        }
+    /* End General Typography */
+
+    /* List Styling */
+    ul {
+      list-style-type: none;
+    }
+
+    li {
+      margin-top: 10px;
+      font-size: 1.56em;
+    }
+
+    ul.content-ul>li {
+      margin-top: 0;
+    }
+
+    li>strong {
+      font-style: italic;
+      color: #737373;
+      display: block;
+      margin-bottom: 0.3em;
+    }
+
+    li>strong>img {
+      display: inline-block;
+      height: 1.2em;
+      width: 1.2em;
+      margin-right: 0.3em;
+    }
+
+    li>a {
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      li>a {
+        margin-left: 2em;
       }
-      /* End General Typography */
+    }
 
-      /* List Styling */
-      ul {
-        list-style-type: none;
-      }
+    ul.content-ul>li>a {
+      display: inline;
+    }
 
-      li {
-        margin-top: 10px;
-        font-size: 1.56em;
-      }
+    li>span {
+      color: #3f3f46;
+      font-size: 0.7em;
+      font-style: italic;
+    }
 
-      ul.content-ul > li {
-        margin-top: 0;
-      }
+    /* End List Styling */
 
-      li > strong {
-        font-style: italic;
-        color: #737373;
-        display: block;
-        margin-bottom: 0.3em;
-      }
+    main {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
 
-      li > strong > img {
-        display: inline-block;
-        height: 1.2em;
-        width: 1.2em;
-        margin-right: 0.3em;
-      }
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+      display: table;
+    }
 
-      li > a {
-        display: block;
-      }
-
-      @media (min-width: 768px) {
-        li > a {
-          margin-left: 2em;
-        }
-      }
-
-      ul.content-ul > li > a {
-        display: inline;
-      }
-
-      li > span {
-        color: #3f3f46;
-        font-size: 0.7em;
-        font-style: italic;
-      }
-      /* End List Styling */
-
+    @media (min-width: 768px) {
       main {
-        margin-left: 10px;
-        margin-right: 10px;
-      }
-
-      .center {
         margin-left: auto;
         margin-right: auto;
         display: table;
       }
+    }
 
-      @media (min-width: 768px) {
-        main {
-          margin-left: auto;
-          margin-right: auto;
-          display: table;
-        }
+    /* Warning / Info Styling */
+    div.warning {
+      border: 0.5em solid #850101;
+      padding: 10px;
+      text-align: center;
+      width: fit-content;
+      margin-bottom: 1.5em;
+    }
+
+    div.info {
+      border: 0.5em solid #39ff14;
+    }
+
+    div.info>h2 {
+      color: #39ff14 !important;
+    }
+
+    div.info>p {
+      font-size: 2em;
+    }
+
+    div.warning>h2 {
+      color: #8b0000;
+    }
+
+    div.warning>p {
+      font-size: 1.4em;
+    }
+
+    div.warning>p>span {
+      font-style: italic;
+    }
+
+    /* End Warning Styling */
+
+    /* Compromised Warning Styling */
+    div.comp-warning {
+      margin: 10px;
+    }
+
+    div.comp-warning>span {
+      color: #ee4b2b;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    /* End Compromised Warning Styling */
+
+    /* Contact Styling */
+    div#contact {
+      width: 100%;
+      background-color: #18181b;
+      padding-top: 4em;
+      padding-bottom: 4em;
+      margin-top: 1em;
+    }
+
+    div#contact>div {
+      text-align: center;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+    @media (min-width: 768px) {
+      div#contact>div {
+        width: 60%;
       }
 
-      /* Warning Styling */
-      div#warning {
-        border: 0.5em solid #850101;
-        padding: 10px;
-        text-align: center;
-        width: fit-content;
-      }
-
-      div#warning > h2 {
-        color: #8b0000;
-      }
-
-      div#warning > p {
-        font-size: 1.4em;
-      }
-
-      div#warning > p > span {
-        font-style: italic;
-      }
-      /* End Warning Styling */
-
-      /* Compromised Warning Styling */
-      div.comp-warning {
-        margin: 10px;
-      }
-
-      div.comp-warning > span {
-        color: #ee4b2b;
-        font-size: 1.5em;
-        font-weight: bold;
-      }
-      /* End Compromised Warning Styling */
-
-      /* Contact Styling */
       div#contact {
-        width: 100%;
-        background-color: #18181b;
-        padding-top: 4em;
-        padding-bottom: 4em;
-        margin-top: 1em;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    /* End Contact Styling */
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
       }
 
-      div#contact > div {
-        text-align: center;
-        padding-left: 1em;
-        padding-right: 1em;
+      to {
+        opacity: 1;
       }
+    }
+  </style>
+  <!-- end style -->
+</head>
 
-      @media (min-width: 768px) {
-        div#contact > div {
-          width: 60%;
-        }
+<body>
+  <main>
+    <h1>Hey! I'm Zekiel / Maxine. Let's begin</h1>
 
-        div#contact {
-          padding-left: 0;
-          padding-right: 0;
-        }
-      }
-      /* End Contact Styling */
-
-      @keyframes fadein {
-        from {
-          opacity: 0;
-        }
-
-        to {
-          opacity: 1;
-        }
-      }
-    </style>
-    <!-- end style -->
-  </head>
-  <body>
-    <main>
-      <h1>Hey! I'm Zekiel / Maxine. Let's begin</h1>
-
-      <div id="warning" class="center">
-        <h2>-- BEFORE YOU GO ANY FURTHER --</h2>
-        <span>Keep yourself safe by using the following tools</span>
-        <p>
-          > <span>TOR:</span>
-          <a href="https://www.torproject.org/download/" target="_blank">
-            https://www.torproject.org/download/</a
-          >
-          <
-        </p>
-        <span
-          >AVOID signing up to anything! If you MUST make an account, use the
-          following email to be anonymous</span
-        >
-        <p>
-          > <span>Courvix:</span>
-          <a href="https://courvix.com" target="_blank">
-            https://courvix.com/</a
-          >
-          <
-        </p>
-      </div>
-
-      <h2>Secure Chats</h2>
-      <ul>
-        <li>
-          <strong><img src="img/utox.png" />Tox</strong
-          ><a
-            href="https://play.google.com/store/apps/details?id=ltd.evilcorp.atox"
-            >[aTox for Android]</a
-          >
-          <a href="https://github.com/uTox/uTox/blob/develop/docs/INSTALL.md"
-            >[uTox for Desktop]</a
-          >
-        </li>
-        <li>
-          <strong><img src="img/session.svg" />Session</strong>
-          <a
-            href="https://play.google.com/store/apps/details?id=network.loki.messenger&pli=1"
-            >[Android]</a
-          >
-          <a
-            href="https://apps.apple.com/app/session-private-messenger/id1470168868?ls=1"
-            >[iOS]</a
-          >
-          <a href="https://getsession.org/download">[Desktop]</a>
-        </li>
-        <li>
-          <strong><img src="img/keybase.png" />Keybase</strong>
-          <a
-            href="https://play.google.com/store/apps/details?id=io.keybase.ossifrage"
-            >[Android]</a
-          >
-          <a
-            href="https://apps.apple.com/us/app/keybase-crypto-for-everyone/id1044461770"
-            >[iOS]</a
-          >
-          <a href="https://keybase.io/download">[Desktop]</a>
-        </li>
-      </ul>
-
-      <h2>Loli & Shota</h2>
-      <ul class="content-ul">
-        <li>
-          <a href="https://booru.allthefallen.moe/">ATF</a
-          ><span class="green"> Some cub content</span>
-        </li>
-        <li>
-          <a href="https://gelbooru.com/">Gelbooru</a
-          ><span> Requires checking "Display all site content" and saving</span>
-        </li>
-        <li>
-          <a href="https://lolibooru.moe/">lolibooru</a
-          ><span class="red"> Requires an account</span
-          ><span class="green"> Has some 3dcg content</span>
-        </li>
-        <li>
-          <a href="https://nhentai.net/tag/lolicon/">nhentai</a>
-        </li>
-      </ul>
-
-      <h2>Cub</h2>
-      <ul class="content-ul">
-        <li>
-          <a href="https://e621.net/">e621</a
-          ><span class="red">
-            Requires an account and removing tags from blacklist</span
-          >
-        </li>
-        <li>
-          <a href="https://inkbunny.net/">Inkbunny</a
-          ><span class="red"> Requires an account</span>
-        </li>
-      </ul>
-
-      <h2>Zoo</h2>
-      <ul class="content-ul">
-        <li>
-          <a href="https://www.zoox18.com/">ZX18 </a
-          ><span class="red"> Requires an account</span>
-          <a
-            href="https://paste.ec/paste/MFv+Zeok#zjZchF4BDpzQAfZcjh6Q1l0OBY7JpqSpabl7YEeFasf"
-            class="green"
-            >[private video bypass]</a
-          >
-        </li>
-        <li>
-          <a href="https://www.zoovilleforum.net">ZF</a>
-          <span>Requires an account</span>
-        </li>
-        <li>
-          <a href="https://en.luxuretv.com/search/videos/zoo/">LuxureTV</a>
-        </li>
-      </ul>
-
-      <h2 class="has-badge">Pizza</h2>
-      <span class="tor-badge">[Requires Tor]</span>
-      <ul class="content-ul">
-        <li>
-          <a
-            href="http://m4x46ca54hicudsmwijoxg4ds4abs6q45sr6wm6g6ptt2vbpnjxnskad.onion/"
-            >[INDEX] Topic Links</a
-          >
-        </li>
-        <li>
-          <a
-            href="http://xqhl7mlb4by33yowr4fve26pqm6aubt2ujaaelchelwydo3of2gtjmyd.onion/indexLoo.html"
-            >[INDEX] Zona</a
-          >
-        </li>
-        <li>
-          <a
-            href="http://gl7qgheo7nuirnrkrmzn33wq33hmjh5p3bunrl4pskdjjtay57pniaqd.onion/basics.html"
-            >[INDEX] Community Basics</a
-          >
-        </li>
-      </ul>
-      <div class="comp-warning center">
-        <span
-          >AMO AND THE RESISTANCE ARE COMPROMISED, PAY ATTENTION TO LACK OF
-          CAPTCHA</span
-        >
-      </div>
-    </main>
-    <div id="contact">
-      <div class="center">
-        <p>Made by komparatives & zekiel</p>
-        <div class="close">
-          <h3>Contact Me</h3>
-          <p>Discord: maxinedafox</p>
-          <p>[Most Used] Keybase: miaadsl</p>
-        </div>
-        <br />
-        <div class="close">
-          <p>
-            Tox:
-            FD41CEB9E3108AF3DB4FC24B3BB387F8D612C1FB9CE6151EFBFFEB4D2D93984074C19BBC2B59
-          </p>
-          <p>
-            Session:
-            05a66a20ae74fbaa3d0d43684898402d5c078c0967db3369e9e84692f4c16b6f1c
-          </p>
-        </div>
-        <br />
-        <p class="green">
-          If you need help with anything dm me on Discord or Keybase uwu
-        </p>
-        <br />
-        <p class="yellow">
-          Note to antis: Let's be honest: you'll be wasting your time playing a
-          game of cat and mouse. It is more than easy for us to create 10x the
-          mirrors we already have.
-        </p>
-        <br />
-        <div class="close red">
-          <p><strong>ATTEMPTED TAKEDOWNS:</strong> 1</p>
-          <p><strong>NOTE:</strong> This is a mirror of the original site</p>
-        </div>
-        <img
-          src="https://vbr.wocr.tk/badge?page_id=MFL_LL&text=VISITORS&style=for-the-badge"
-        />
-      </div>
+    <div class="warning center info">
+      <h2>the discord server will likely not be remade</h2>
+      <p>made a new session</p>
+      <p>please check bottom of page</p>
     </div>
-  </body>
+
+    <div class="warning center">
+      <h2>-- BEFORE YOU GO ANY FURTHER --</h2>
+      <span>Keep yourself safe by using the following tools</span>
+      <p>
+        > <span>TOR:</span>
+        <a href="https://www.torproject.org/download/" target="_blank">
+          https://www.torproject.org/download/</a>
+        < </p>
+          <span>AVOID signing up to anything! If you MUST make an account, use the
+            following email to be anonymous</span>
+          <p>
+            > <span>Courvix:</span>
+            <a href="https://courvix.com" target="_blank">
+              https://courvix.com/</a>
+            < </p>
+    </div>
+
+    <h2>Secure Chats</h2>
+    <ul>
+      <li>
+        <strong><img src="img/utox.png" />Tox</strong><a
+          href="https://play.google.com/store/apps/details?id=ltd.evilcorp.atox">[aTox for Android]</a>
+        <a href="https://github.com/uTox/uTox/blob/develop/docs/INSTALL.md">[uTox for Desktop]</a>
+      </li>
+      <li>
+        <strong><img src="img/session.svg" />Session</strong>
+        <a href="https://play.google.com/store/apps/details?id=network.loki.messenger&pli=1">[Android]</a>
+        <a href="https://apps.apple.com/app/session-private-messenger/id1470168868?ls=1">[iOS]</a>
+        <a href="https://getsession.org/download">[Desktop]</a>
+      </li>
+      <li>
+        <strong><img src="img/keybase.png" />Keybase</strong>
+        <a href="https://play.google.com/store/apps/details?id=io.keybase.ossifrage">[Android]</a>
+        <a href="https://apps.apple.com/us/app/keybase-crypto-for-everyone/id1044461770">[iOS]</a>
+        <a href="https://keybase.io/download">[Desktop]</a>
+      </li>
+    </ul>
+
+    <h2>Loli & Shota</h2>
+    <ul class="content-ul">
+      <li>
+        <a href="https://booru.allthefallen.moe/">ATF</a><span class="green"> Some cub content</span>
+      </li>
+      <li>
+        <a href="https://gelbooru.com/">Gelbooru</a><span> Requires checking "Display all site content" and
+          saving</span>
+      </li>
+      <li>
+        <a href="https://lolibooru.moe/">lolibooru</a><span class="red"> Requires an account</span><span class="green">
+          Has some 3dcg content</span>
+      </li>
+      <li>
+        <a href="https://nhentai.net/tag/lolicon/">nhentai</a>
+      </li>
+    </ul>
+
+    <h2>Cub</h2>
+    <ul class="content-ul">
+      <li>
+        <a href="https://e621.net/">e621</a><span class="red">
+          Requires an account and removing tags from blacklist</span>
+      </li>
+      <li>
+        <a href="https://inkbunny.net/">Inkbunny</a><span class="red"> Requires an account</span>
+      </li>
+    </ul>
+
+    <h2>Zoo</h2>
+    <ul class="content-ul">
+      <li>
+        <a href="https://www.zoox18.com/">ZX18 </a><span class="red"> Requires an account</span>
+        <a href="https://paste.ec/paste/MFv+Zeok#zjZchF4BDpzQAfZcjh6Q1l0OBY7JpqSpabl7YEeFasf" class="green">[private
+          video bypass]</a>
+      </li>
+      <li>
+        <a href="https://www.zoovilleforum.net">ZF</a>
+        <span>Requires an account</span>
+      </li>
+      <li>
+        <a href="https://en.luxuretv.com/search/videos/zoo/">LuxureTV</a>
+      </li>
+    </ul>
+
+    <h2 class="has-badge">Pizza</h2>
+    <span class="tor-badge">[Requires Tor]</span>
+    <ul class="content-ul">
+      <li>
+        <a href="http://m4x46ca54hicudsmwijoxg4ds4abs6q45sr6wm6g6ptt2vbpnjxnskad.onion/">[INDEX] Topic Links</a>
+      </li>
+      <li>
+        <a href="http://xqhl7mlb4by33yowr4fve26pqm6aubt2ujaaelchelwydo3of2gtjmyd.onion/indexLoo.html">[INDEX] Zona</a>
+      </li>
+      <li>
+        <a href="http://gl7qgheo7nuirnrkrmzn33wq33hmjh5p3bunrl4pskdjjtay57pniaqd.onion/basics.html">[INDEX] Community
+          Basics</a>
+      </li>
+    </ul>
+    <div class="comp-warning center">
+      <span>AMO AND THE RESISTANCE ARE COMPROMISED, PAY ATTENTION TO LACK OF
+        CAPTCHA</span>
+    </div>
+  </main>
+  <div id="contact">
+    <div class="center">
+      <p>Made by komparatives & zekiel</p>
+      <div class="close">
+        <h3>Contact Me</h3>
+        <p>Discord: <strong>banned lol</strong></p>
+        <p>[Most Used] Keybase: miaadsl</p>
+      </div>
+      <br />
+      <div class="close">
+        <p>
+          Tox:
+          FD41CEB9E3108AF3DB4FC24B3BB387F8D612C1FB9CE6151EFBFFEB4D2D93984074C19BBC2B59
+        </p>
+        <p>
+          Session:
+          0534c9132841141f86c9d0b8376efa83ef6174eb4a0a53e3391bf7e2854221e913
+        </p>
+      </div>
+      <br />
+      <p class="green">
+        If you need help with anything dm me on Discord or Keybase uwu
+      </p>
+      <br />
+      <p class="yellow">
+        Note to antis: Let's be honest: you'll be wasting your time playing a game of cat and mouse. it's easy for us to
+        recreate and publish this site 10 fold if ever an attempt was made to take it down.
+      </p>
+      <br />
+      <div class="close red">
+        <p><strong>ATTEMPTED TAKEDOWNS:</strong> 1</p>
+        <p><strong>NOTE:</strong> This is a mirror of the original site</p>
+      </div>
+      <img src="https://vbr.wocr.tk/badge?page_id=MFL_LL&text=VISITORS&style=for-the-badge" />
+    </div>
+  </div>
+</body>
+
 </html>
